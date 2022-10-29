@@ -56,15 +56,16 @@ export default function ElearningLandingHero() {
                 }}
               >
                 <Typography variant="h1">
-                  Free
-                  <Box component="span" sx={{ color: 'text.disabled' }}>
+                  Roofing Done
+                  <Box component="span" sx={{ color: 'primary.main', textDecoration: 'underline' }}>
+                  {' '}Right!
+                  </Box>
+                  {/* Roofing */}
+                  {/* <Box component="span" sx={{ color: 'text.disabled' }}>
                     {' '}
                     Online{' '}
                   </Box>
-                  <Box component="span" sx={{ color: 'primary.main', textDecoration: 'underline' }}>
-                    Courses{' '}
-                  </Box>
-                  From The Experts
+                  From The Experts */}
                 </Typography>
 
                 <Typography sx={{ color: 'text.secondary', mt: 3, mb: 5 }}>
@@ -104,7 +105,9 @@ export default function ElearningLandingHero() {
             </Grid>
 
             <Grid item xs={12} md={6} lg={7} sx={{ display: { xs: 'none', md: 'block' } }}>
-              <Image alt='hero' src="https://kpyoungroofing.vercel.app/assets/Portfolio/HeroLogo.svg" />
+              <Box sx={{pl:15, borderRadius:50}}>
+              <Image alt='hero' src="https://kpyoungroofing.vercel.app/assets/Portfolio/CDC_House.jpeg" />
+              </Box>
             </Grid>
           </Grid>
         </Container>
