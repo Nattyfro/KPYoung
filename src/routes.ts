@@ -52,7 +52,7 @@ const Routes = {
   resetPassword: '/auth/reset-password',
   verifyCode: '/auth/verify-code',
   maintenance: '/maintenance',
-  comingsoon: '/coming-soon',
+  // comingsoon: '/coming-soon',
   pricing01: '/pricing-01',
   pricing02: '/pricing-02',
   checkout: '/checkout',

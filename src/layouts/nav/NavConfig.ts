@@ -8,7 +8,7 @@ import { _tours, _jobs, _courses } from '../../../_data/mock';
 export const PageLinks = [
   {
     order: '1',
-    subheader: 'Marketing',
+    subheader: 'Droitwich Spa',
     cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_marketing.jpg',
     items: [
       { title: 'Landing', path: Routes.marketing.landing },
@@ -23,7 +23,7 @@ export const PageLinks = [
   },
   {
     order: '3',
-    subheader: 'Career',
+    subheader: 'Chaddesley Corbett',
     cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_career.jpg',
     items: [
       { title: 'Landing', path: Routes.career.landing },
@@ -48,7 +48,7 @@ export const PageLinks = [
       { title: '404 Error', path: Routes.page404 },
       { title: '500 Error', path: Routes.page500 },
       { title: 'Maintenance', path: Routes.maintenance },
-      { title: 'ComingSoon', path: Routes.comingsoon },
+      // { title: 'ComingSoon', path: Routes.comingsoon },
       { title: 'Pricing 01', path: Routes.pricing01 },
       { title: 'Pricing 02', path: Routes.pricing02 },
       { title: 'Checkout', path: Routes.checkout },
@@ -57,8 +57,8 @@ export const PageLinks = [
   },
   {
     order: '4',
-    subheader: 'E-Learning',
-    cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_course.jpg',
+    subheader: 'Stourbridge',
+    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge.jpg',
     items: [
       { title: 'Landing', path: Routes.eLearning.landing },
       { title: 'Courses', path: Routes.eLearning.courses },
@@ -71,7 +71,7 @@ export const PageLinks = [
   },
   {
     order: '2',
-    subheader: 'Travel',
+    subheader: 'Sutton Coldfield',
     cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_travel.jpg',
     items: [
       { title: 'Landing', path: Routes.travel.landing },
@@ -97,11 +97,10 @@ export const PageLinks = [
 
 export const navConfig = [
   { title: 'Home', path: '/' },
-  { title: 'Components', path: Routes.componentsUI },
+  { title: 'About Us', path: Routes.componentsUI },
   {
-    title: 'Pages',
+    title: 'Portfolio',
     path: Routes.pages,
     children: [PageLinks[0], PageLinks[4], PageLinks[1], PageLinks[3], PageLinks[2], PageLinks[5]],
   },
-  { title: 'Documentation', path: Routes.docs },
 ];

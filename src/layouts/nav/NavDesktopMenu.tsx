@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 import { m } from 'framer-motion';
 // next
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
 // @mui
 import { styled, useTheme } from '@mui/material/styles';
 import {
@@ -11,7 +10,6 @@ import {
   Grid,
   List,
   Link,
-  Stack,
   ListItem,
   BoxProps,
   ListItemProps,
@@ -23,7 +21,7 @@ import { HEADER_DESKTOP_HEIGHT } from '../../config';
 // @types
 import { NavDesktopMenuProps } from '../../@types/layout';
 //
-import { Image, CarouselDots, CarouselArrows } from '../../components';
+import { Image, CarouselDots } from '../../components';
 import { DialogAnimate, MotionContainer, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
@@ -99,7 +97,6 @@ export default function NavDesktopMenu({
   onClose,
   isScrolling,
 }: NavDesktopMenuProps) {
-  const router = useRouter();
 
   const theme = useTheme();
 
@@ -107,9 +104,6 @@ export default function NavDesktopMenu({
 
   const carouselList = lists.filter((list) => list.subheader !== 'Common');
 
-  const commonList = lists.filter((list) => list.subheader === 'Common')[0];
-
-  const minList = lists.length > 5;
 
   const carouselSettings = {
     arrows: false,
@@ -121,13 +115,6 @@ export default function NavDesktopMenu({
     ...CarouselDots(),
   };
 
-  const handlePrevious = () => {
-    carouselRef.current?.slickPrev();
-  };
-
-  const handleNext = () => {
-    carouselRef.current?.slickNext();
-  };
 
   return (
     <DialogAnimate
@@ -173,7 +160,6 @@ export default function NavDesktopMenu({
                       <ListSubheaderStyled>{subheader}</ListSubheaderStyled>
                     </m.div>
 
-                    {cover ? (
                       <NextLink href={path} passHref>
                         <Box
                           component={m.a}
@@ -195,25 +181,8 @@ export default function NavDesktopMenu({
                           />
                         </Box>
                       </NextLink>
-                    ) : (
-                      <Box
-                        sx={{
-                          mb: 2.5,
-                          height: 132,
-                          borderRadius: 1.5,
-                          display: 'flex',
-                          typography: 'h5',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          color: 'text.disabled',
-                          bgcolor: 'background.neutral',
-                        }}
-                      >
-                        Coming Soon!
-                      </Box>
-                    )}
 
-                    <Stack spacing={1.5} alignItems="flex-start">
+                    {/* <Stack spacing={1.5} alignItems="flex-start">
                       {items?.map((item) => {
                         const { title, path } = item;
 
@@ -221,46 +190,15 @@ export default function NavDesktopMenu({
 
                         return <LinkItem key={title} title={title} href={path} active={active} />;
                       })}
-                    </Stack>
+                    </Stack> */}
                   </List>
                 );
               })}
             </Slider>
 
-            {minList && (
-              <CarouselArrows
-                onNext={handleNext}
-                onPrevious={handlePrevious}
-                sx={{
-                  top: -28,
-                  position: 'relative',
-                  justifyContent: 'flex-end',
-                }}
-              />
-            )}
           </Box>
         </Grid>
 
-        {/* Common List */}
-        <Grid
-          item
-          xs={3}
-          sx={{
-            borderLeft: (theme) => `dashed 1px ${theme.palette.divider}`,
-          }}
-        >
-          <List disablePadding sx={{ py: 6 }} component={MotionContainer}>
-            <ListSubheaderStyled>{commonList.subheader}</ListSubheaderStyled>
-            <Stack spacing={1.5} alignItems="flex-start">
-              {commonList.items.map((item) => {
-                const { title, path } = item;
-                const active = router.pathname === path;
-
-                return <LinkItem key={title} title={title} href={path} active={active} />;
-              })}
-            </Stack>
-          </List>
-        </Grid>
       </Grid>
     </DialogAnimate>
   );

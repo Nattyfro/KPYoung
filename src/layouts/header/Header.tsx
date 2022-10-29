@@ -81,11 +81,6 @@ export default function Header({ transparent }: Props) {
               }}
             />
 
-            <LanguagePopover
-              sx={{
-                ...(isScrolling && { color: 'text.primary' }),
-              }}
-            />
 
             <Divider orientation="vertical" sx={{ height: 24 }} />
 
