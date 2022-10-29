@@ -171,7 +171,9 @@ export default function NavDesktopMenu({
                             src={cover}
                             sx={{
                               mb: 2.5,
-                              minHeight: 80,
+                              // minHeight: 80,
+                              width:1,
+                              height:1,
                               borderRadius: 1.5,
                               cursor: 'pointer',
                               transition: theme.transitions.create('opacity'),

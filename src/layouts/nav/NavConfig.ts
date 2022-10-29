@@ -71,8 +71,8 @@ export const PageLinks = [
   },
   {
     order: '2',
-    subheader: 'Chaddesley Corbett',
-    cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_travel.jpg',
+    subheader: 'Worcester',
+    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Worcester.jpg',
     items: [
       { title: 'Landing', path: Routes.travel.landing },
       { title: 'Tours', path: Routes.travel.tours },
