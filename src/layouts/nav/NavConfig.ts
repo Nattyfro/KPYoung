@@ -24,7 +24,7 @@ export const PageLinks = [
   {
     order: '3',
     subheader: 'Droitwich & Spa',
-    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Sambourne.png',
+    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Sambourne.jpg',
     items: [
       { title: 'Landing', path: Routes.career.landing },
       { title: 'Jobs', path: Routes.career.jobs },
@@ -86,11 +86,19 @@ export const PageLinks = [
     ],
   },
   {
-    order: '6',
-    subheader: 'Coming Soon',
+    order: '2',
+    subheader: 'Worcester',
+    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Worcester.jpg',
     items: [
-      { title: 'Item1', path: '' },
-      { title: 'Item2', path: '' },
+      { title: 'Landing', path: Routes.travel.landing },
+      { title: 'Tours', path: Routes.travel.tours },
+      { title: 'Tour', path: Routes.travel.tour(_tours[0].id) },
+      { title: 'Checkout', path: Routes.travel.checkout },
+      { title: 'Checkout Complete', path: Routes.travel.checkoutComplete },
+      { title: 'Blog Posts', path: Routes.travel.posts },
+      { title: 'Blog Post', path: Routes.travel.post('post-01') },
+      { title: 'About', path: Routes.travel.about },
+      { title: 'Contact', path: Routes.travel.contact },
     ],
   },
 ];

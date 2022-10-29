@@ -86,7 +86,7 @@ export default function ElearningContactForm() {
             >
               <Typography variant="h3">Drop Us A Line</Typography>
               <Typography sx={{ color: 'text.secondary' }}>
-                We normally respond within 2 business days
+                We normally respond within 24 hours
               </Typography>
             </Stack>
 

@@ -42,27 +42,6 @@ export default function Header({ transparent }: Props) {
             justifyContent: 'flex-start',
           }}
         >
-          <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Logo onDark={transparent && !isScrolling} />
-
-            <Link href="https://zone-docs.vercel.app/changelog" target="_blank" rel="noopener">
-              <Label
-                color="info"
-                sx={{
-                  ml: 0.5,
-                  px: 0.5,
-                  top: -14,
-                  left: 64,
-                  height: 20,
-                  fontSize: 11,
-                  cursor: 'pointer',
-                  position: 'absolute',
-                }}
-              >
-                v1.4
-              </Label>
-            </Link>
-          </Box>
 
           {isDesktop && (
             <NavDesktop
@@ -72,6 +51,11 @@ export default function Header({ transparent }: Props) {
             />
           )}
 
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ pt:5, position: 'relative' }}>
+            <Logo  onDark={transparent && !isScrolling} />
+
+          </Box>
           <Box sx={{ flexGrow: 1 }} />
 
           <Stack spacing={2} direction="row" alignItems="center">
@@ -97,12 +81,12 @@ export default function Header({ transparent }: Props) {
                       ...(isScrolling && isLight && { color: 'text.primary' }),
                     }}
                   >
-                    Join Us
+                    Jobs
                   </Button>
                 </NextLink>
 
-                <Button variant="contained" href={Routes.buyNow} target="_blank" rel="noopener">
-                  Buy Now
+                <Button variant="contained" href={Routes.eLearning.contact}>
+                  Contact Us
                 </Button>
               </Stack>
             )}

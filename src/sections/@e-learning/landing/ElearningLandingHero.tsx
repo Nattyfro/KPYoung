@@ -14,7 +14,7 @@ import _mock from '../../../../_data/mock';
 // assets
 import { ElearningHeroIllustration } from '../../../assets';
 // components
-import { Iconify, TextIconLabel, PlayerWithButton } from '../../../components';
+import { Iconify, TextIconLabel, PlayerWithButton, Image } from '../../../components';
 import { FabButtonAnimate } from '../../../components/animate';
 
 // ----------------------------------------------------------------------
@@ -104,7 +104,7 @@ export default function ElearningLandingHero() {
             </Grid>
 
             <Grid item xs={12} md={6} lg={7} sx={{ display: { xs: 'none', md: 'block' } }}>
-              <ElearningHeroIllustration />
+              <Image alt='hero' src="https://kpyoungroofing.vercel.app/assets/Portfolio/HeroLogo.svg" />
             </Grid>
           </Grid>
         </Container>

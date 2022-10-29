@@ -9,20 +9,23 @@ import {
   Box,
   Grid,
   List,
-  Link,
   ListItem,
   BoxProps,
   ListItemProps,
   ListSubheader,
   ListSubheaderProps,
+  Button,
+  Stack,
 } from '@mui/material';
 // config
 import { HEADER_DESKTOP_HEIGHT } from '../../config';
 // @types
 import { NavDesktopMenuProps } from '../../@types/layout';
 //
-import { Image, CarouselDots } from '../../components';
+import { Image, CarouselDots, Iconify, CarouselArrows } from '../../components';
 import { DialogAnimate, MotionContainer, varFade } from '../../components/animate';
+import launchIcon from '@iconify/icons-carbon/launch';
+import Routes from '../../routes';
 
 // ----------------------------------------------------------------------
 
@@ -97,24 +100,31 @@ export default function NavDesktopMenu({
   onClose,
   isScrolling,
 }: NavDesktopMenuProps) {
-
   const theme = useTheme();
 
   const carouselRef = useRef<Slider | null>(null);
 
   const carouselList = lists.filter((list) => list.subheader !== 'Common');
 
-
   const carouselSettings = {
     arrows: false,
-    dots: true,
+    dots: false,
     infinite: false,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     rtl: Boolean(theme.direction === 'rtl'),
     ...CarouselDots(),
   };
 
+  const minList = lists.length > 5;
+
+  const handlePrevious = () => {
+    carouselRef.current?.slickPrev();
+  };
+
+  const handleNext = () => {
+    carouselRef.current?.slickNext();
+  };
 
   return (
     <DialogAnimate
@@ -145,9 +155,10 @@ export default function NavDesktopMenu({
         },
       }}
     >
-      <Grid container columns={15} spacing={4}>
+      <Grid container columns={12} spacing={0}>
         <Grid item xs={12}>
-          <Box sx={{ position: 'relative', px: 2, py: 6 }}>
+          <Stack sx={{ position: 'relative', px: 2, py: 6 }}>
+            <Box>
             <Slider ref={carouselRef} {...carouselSettings}>
               {carouselList.map((list) => {
                 const { subheader, items, cover } = list;
@@ -160,81 +171,54 @@ export default function NavDesktopMenu({
                       <ListSubheaderStyled>{subheader}</ListSubheaderStyled>
                     </m.div>
 
-                      <NextLink href={path} passHref>
-                        <Box
-                          component={m.a}
-                          variants={varFade({ distance: 80 }).inLeft}
-                          sx={{ display: 'block' }}
-                        >
-                          <Image
-                            alt={cover}
-                            src={cover}
-                            sx={{
-                              mb: 2.5,
-                              // minHeight: 80,
-                              width:'300px',
-                              height:'180px',
-                              borderRadius: 1.5,
-                              cursor: 'pointer',
-                              transition: theme.transitions.create('opacity'),
-                              border: (theme) => `solid 1px ${theme.palette.divider}`,
-                              '&:hover': { opacity: 0.8 },
-                            }}
-                          />
-                        </Box>
-                      </NextLink>
-
-                    {/* <Stack spacing={1.5} alignItems="flex-start">
-                      {items?.map((item) => {
-                        const { title, path } = item;
-
-                        const active = router.pathname === path || router.asPath === path;
-
-                        return <LinkItem key={title} title={title} href={path} active={active} />;
-                      })}
-                    </Stack> */}
+                    <NextLink href={path} passHref>
+                      <Box
+                        component={m.a}
+                        variants={varFade({ distance: 80 }).inLeft}
+                        sx={{ display: 'block' }}
+                      >
+                        <Image
+                          alt={cover}
+                          src={cover}
+                          sx={{
+                            mb: 2.5,
+                            // minHeight: 80,
+                            width: '300px',
+                            height: '180px',
+                            borderRadius: 1.5,
+                            cursor: 'pointer',
+                            transition: theme.transitions.create('opacity'),
+                            border: (theme) => `solid 1px ${theme.palette.divider}`,
+                            '&:hover': { opacity: 0.8 },
+                          }}
+                        />
+                      </Box>
+                    </NextLink>
                   </List>
                 );
               })}
             </Slider>
-
-          </Box>
+            </Box>
+            
+            <Box alignItems="center"
+        justifyContent="center" display="flex" sx={{py:3}}>
+          <Button
+                size="large"
+                variant="contained"
+                endIcon={<Iconify icon={launchIcon} />}
+                target="_blank"
+                rel="noopener"
+                href={Routes.figmaPreview}
+                color="inherit"
+              >
+                View All Projects
+              </Button>
+              </Box>
+          </Stack>
         </Grid>
-
       </Grid>
     </DialogAnimate>
   );
 }
 
-// ----------------------------------------------------------------------
 
-type LinkItemProps = {
-  title: string;
-  href: string;
-  active: boolean;
-};
-
-function LinkItem({ title, href, active }: LinkItemProps) {
-  return (
-    <NextLink key={title} href={href} passHref>
-      <Link
-        color="inherit"
-        underline="hover"
-        component={m.a}
-        variants={
-          varFade({
-            distance: 12,
-            durationIn: 0.16,
-            durationOut: 0.12,
-            easeIn: 'easeIn',
-          }).inRight
-        }
-      >
-        <SubLinkStyle active={active}>
-          <IconBulletStyle active={active} />
-          {title}
-        </SubLinkStyle>
-      </Link>
-    </NextLink>
-  );
-}
