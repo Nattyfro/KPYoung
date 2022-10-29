@@ -106,7 +106,7 @@ export default function ElearningLandingHero() {
 
             <Grid item xs={12} md={6} lg={7} sx={{ display: { xs: 'none', md: 'block' } }}>
               <Box sx={{pl:15, borderRadius:50}}>
-              <Image alt='hero' src="https://kpyoungroofing.vercel.app/assets/Portfolio/CDC_House.jpeg" />
+              <Image alt='hero' src="https://kpyoungroofing.vercel.app/assets/Portfolio/CDC_1.jpeg" />
               </Box>
             </Grid>
           </Grid>
