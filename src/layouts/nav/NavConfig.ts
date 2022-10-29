@@ -24,7 +24,7 @@ export const PageLinks = [
   {
     order: '3',
     subheader: 'Droitwich & Spa',
-    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Droitwich&Spa.png',
+    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Sambourne.png',
     items: [
       { title: 'Landing', path: Routes.career.landing },
       { title: 'Jobs', path: Routes.career.jobs },
