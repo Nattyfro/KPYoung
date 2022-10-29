@@ -8,8 +8,8 @@ import { _tours, _jobs, _courses } from '../../../_data/mock';
 export const PageLinks = [
   {
     order: '1',
-    subheader: 'Droitwich Spa',
-    cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_marketing.jpg',
+    subheader: 'Codsall',
+    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Codsall.jpg',
     items: [
       { title: 'Landing', path: Routes.marketing.landing },
       { title: 'Services', path: Routes.marketing.services },
