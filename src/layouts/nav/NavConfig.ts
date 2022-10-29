@@ -23,8 +23,8 @@ export const PageLinks = [
   },
   {
     order: '3',
-    subheader: 'Chaddesley Corbett',
-    cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_career.jpg',
+    subheader: 'Droitwich & Spa',
+    cover: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Droitwich&Spa.png',
     items: [
       { title: 'Landing', path: Routes.career.landing },
       { title: 'Jobs', path: Routes.career.jobs },
@@ -71,7 +71,7 @@ export const PageLinks = [
   },
   {
     order: '2',
-    subheader: 'Sutton Coldfield',
+    subheader: 'Chaddesley Corbett',
     cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_travel.jpg',
     items: [
       { title: 'Landing', path: Routes.travel.landing },
