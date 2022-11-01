@@ -49,10 +49,10 @@ export default function CustomerElearning({ brands }: Props) {
   return (
     <RootStyle>
       <Container>
-        <Stack spacing={3} sx={{ mb: 8, mx: 'auto', maxWidth: 480, textAlign: 'center' }}>
+        <Stack spacing={3} sx={{ mb: 8, mx: 'auto', maxWidth: 600, textAlign: 'center' }}>
           <Typography variant="h2">We Work With</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            Quisque aliquet, libero consequat elementum convallis.
+          Over the years we have built up a collection of creditable building contracts, feel free to contact them and ask about our workmanship
           </Typography>
         </Stack>
 

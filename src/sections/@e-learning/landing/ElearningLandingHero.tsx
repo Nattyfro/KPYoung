@@ -56,21 +56,19 @@ export default function ElearningLandingHero() {
                 }}
               >
                 <Typography variant="h1">
-                  Roofing Done
+                  Quality{' '}
                   <Box component="span" sx={{ color: 'primary.main', textDecoration: 'underline' }}>
-                  {' '}Right!
+                  Reliable
                   </Box>
-                  {/* Roofing */}
-                  {/* <Box component="span" sx={{ color: 'text.disabled' }}>
+                  {' '}Roofing From
+                  <Box component="span" sx={{ color: 'text.disabled' }}>
                     {' '}
-                    Online{' '}
+                    Experts{' '}
                   </Box>
-                  From The Experts */}
                 </Typography>
 
                 <Typography sx={{ color: 'text.secondary', mt: 3, mb: 5 }}>
-                  Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis
-                  venenatis ante odio sit amet eros.
+                We have the skills, knowledge and experience to manage any roofing project. we pride ourselves on having a reputation for courteous, professional service and a dedication to health and safety.
                 </Typography>
 
                 <Stack spacing={3} alignItems="center" direction={{ xs: 'column', md: 'row' }}>
@@ -106,7 +104,7 @@ export default function ElearningLandingHero() {
 
             <Grid item xs={12} md={6} lg={7} sx={{ display: { xs: 'none', md: 'block' } }}>
               <Box sx={{pl:15, borderRadius:50}}>
-              <Image alt='hero' src="https://kpyoungroofing.vercel.app/assets/Portfolio/CDC_Hero2.png" />
+              <Image alt='hero' src="https://kpyoungroofing.vercel.app/assets/Portfolio/CDC_Hero2@2x.png" />
               </Box>
             </Grid>
           </Grid>
@@ -127,9 +125,9 @@ function SummarySection() {
       direction="row"
       justifyContent={{ xs: 'center', md: 'unset' }}
     >
-      {SummaryItem(14000, 'Learners', 'warning')}
-      {SummaryItem(1050, 'Courses', 'error')}
-      {SummaryItem(59000, 'Graduates', 'success')}
+      {SummaryItem(14000, 'Instalations', 'warning')}
+      {SummaryItem(5000050, 'Turned over', 'error')}
+      {SummaryItem(35, 'Years in business', 'success')}
     </Stack>
   );
 }

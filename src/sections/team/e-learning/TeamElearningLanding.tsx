@@ -26,11 +26,10 @@ export default function TeamElearningLanding({ members }: Props) {
   return (
     <RootStyle>
       <Container>
-        <Stack spacing={3} sx={{ maxWidth: 480, mx: 'auto' }}>
-          <Typography variant="h2">Meet Our Teachers</Typography>
+        <Stack spacing={3} sx={{ maxWidth: 800, mx: 'auto' }}>
+          <Typography variant="h2">Meet Our Team</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            Since wire-frame renderings are relatively simple and fast to calculate, they are often
-            used in cases
+          We pride ourselves on creating a competent, efficient team so that your building requirements are met to a high-quality standard.
           </Typography>
         </Stack>
 

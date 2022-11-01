@@ -42,6 +42,9 @@ export default function Header({ transparent }: Props) {
             justifyContent: 'flex-start',
           }}
         >
+          <Box sx={{ pt: 5, position: 'relative' }}>
+            <Logo onDark={transparent && !isScrolling} />
+          </Box>
 
           {isDesktop && (
             <NavDesktop
@@ -52,11 +55,6 @@ export default function Header({ transparent }: Props) {
           )}
 
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ pt:5, position: 'relative' }}>
-            <Logo  onDark={transparent && !isScrolling} />
-
-          </Box>
-          <Box sx={{ flexGrow: 1 }} />
 
           <Stack spacing={2} direction="row" alignItems="center">
             <Searchbar
@@ -64,7 +62,6 @@ export default function Header({ transparent }: Props) {
                 ...(isScrolling && { color: 'text.primary' }),
               }}
             />
-
 
             <Divider orientation="vertical" sx={{ height: 24 }} />
 

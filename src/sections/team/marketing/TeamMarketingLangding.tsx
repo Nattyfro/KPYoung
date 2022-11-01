@@ -119,8 +119,7 @@ export default function TeamMarketingLangding({ members }: Props) {
                 Meet Our Team
               </Typography>
               <Typography sx={{ color: 'common.white' }}>
-                Since wire-frame renderings are relatively simple and fast to calculate, they are
-                often used in cases
+              We pride ourselves on creating a competent, efficient team so that your building requirements are met to a high-quality standard.
               </Typography>
             </Stack>
           </Grid>
