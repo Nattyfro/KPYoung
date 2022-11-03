@@ -33,11 +33,11 @@ export default function ElearningLandingPage() {
     <Page title="Landing - E-Learning">
       <RootStyle>
         <ElearningLandingHero />
+        
+        <OurClientsElearning brands={_brandsColor} />
 
         <MarketingAboutOurVision />
 
-        <OurClientsElearning brands={_brandsColor} />
-        
         <TeamMarketingLangding members={_members.slice(0, 4)} />
 
         <MarketingServicesBenefits />

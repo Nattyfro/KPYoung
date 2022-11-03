@@ -1,44 +1,47 @@
 import { ReactElement } from 'react';
+// @mui
+import { styled } from '@mui/material/styles';
+// config
+import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../src/config';
+// utils
+import { getAllPosts } from '../src/utils/get-mardown/e-learning/posts';
 // _data
-import { _pricingHome } from '../_data/mock';
+import { _members, _brandsColor } from '../_data/mock';
 // layouts
 import Layout from '../src/layouts';
 // components
 import { Page } from '../src/components';
 // sections
-import { PricingHome } from '../src/sections/pricing';
-import {
-  HomeHero,
-  // HomeFAQs,
-  HomeNewStart,
-  // HomeDemoPages,
-  HomeForDesigner,
-  HomeCombination,
-  HomeAdvertisement,
-  HomeFeatureHighlights,
-  HomeFlexibleComponents,
-} from '../src/sections/home';
+import { TeamMarketingLangding } from '../src/sections/team';
+import { OurClientsElearning } from '../src/sections/our-clients';
+import { ElearningLandingHero } from '../src/sections/@e-learning';
+import { MarketingAboutOurVision, MarketingServicesBenefits } from '../src/sections/@marketing';
+
+// ----------------------------------------------------------------------
+
+const RootStyle = styled('div')(({ theme }) => ({
+  paddingTop: HEADER_MOBILE_HEIGHT,
+  [theme.breakpoints.up('md')]: {
+    paddingTop: HEADER_DESKTOP_HEIGHT,
+  },
+}));
 
 // ----------------------------------------------------------------------
 
 export default function HomePage() {
   return (
-    <Page title="The starting point for your next project">
-      <HomeHero />
+    <Page title="K P Young Roofing Limited">
+      <RootStyle>
+        <ElearningLandingHero />
 
-      <HomeNewStart />
+        <OurClientsElearning brands={_brandsColor} />
 
-      <HomeFlexibleComponents />
+        <MarketingAboutOurVision />
 
-      <HomeFeatureHighlights />
+        <TeamMarketingLangding members={_members.slice(0, 4)} />
 
-      <HomeForDesigner />
-
-      <PricingHome plans={_pricingHome} />
-
-      <HomeCombination />
-
-      <HomeAdvertisement />
+        <MarketingServicesBenefits />
+      </RootStyle>
     </Page>
   );
 }
@@ -48,3 +51,13 @@ export default function HomePage() {
 HomePage.getLayout = function getLayout(page: ReactElement) {
   return <Layout simpleFooter>{page}</Layout>;
 };
+
+// ----------------------------------------------------------------------
+
+export async function getStaticProps() {
+  return {
+    props: {
+      posts: getAllPosts(),
+    },
+  };
+}

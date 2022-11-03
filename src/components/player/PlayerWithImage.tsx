@@ -10,7 +10,6 @@ import { ReactPlayerStyle } from './Player';
 import { DialogAnimate, IconButtonAnimate, FabButtonAnimate, varZoom } from '../animate';
 import Image, { ImageRato } from '../Image';
 import Iconify from '../Iconify';
-import BgOverlay from '../BgOverlay';
 
 // ----------------------------------------------------------------------
 
@@ -43,14 +42,14 @@ export default function PlayerWithImage({ imgPath, ratio = '16/9', videoPath }: 
           size="large"
           color="inherit"
           onClick={handleOpen}
-          sx={{ width: 1, height: 1, bgcolor: 'common.white' }}
+          sx={{ width: '1', height: 1, bgcolor: 'common.white' }}
           sxWrap={{
             top: 0,
             left: 0,
             right: 0,
             bottom: 0,
-            width: 64,
-            height: 64,
+            width: {xs: 32, md:64},
+            height: {xs: 32, md:64},
             zIndex: 9,
             m: 'auto',
             position: 'absolute',
@@ -59,7 +58,7 @@ export default function PlayerWithImage({ imgPath, ratio = '16/9', videoPath }: 
           <Iconify icon={playFilledAlt} sx={{ color: 'primary.main' }} />
         </FabButtonAnimate>
 
-        <BgOverlay />
+        {/* <BgOverlay /> */}
 
         <Image alt="hero" src={imgPath} ratio={ratio} />
       </Box>
@@ -75,9 +74,9 @@ export default function PlayerWithImage({ imgPath, ratio = '16/9', videoPath }: 
           },
           exit: { ...varZoom().in.exit, scale: 0.64 },
         }}
-        sx={{ bgcolor: 'transparent' }}
+        sx={{ bgcolor: 'transparent', p:5, BorderRadius:"20px" }}
       >
-        <Box sx={{ position: 'fixed', top: 24, right: 24, zIndex: 9 }}>
+        <Box sx={{ position: 'fixed', top: 55, right: 70, zIndex: 9 }}>
           <IconButtonAnimate
             size="large"
             onClick={handleClose}
@@ -89,7 +88,7 @@ export default function PlayerWithImage({ imgPath, ratio = '16/9', videoPath }: 
               },
             }}
           >
-            <Iconify icon={closeIcon} sx={{ width: 24, height: 24 }} />
+            <Iconify icon={closeIcon} sx={{ width: {xs: 12, md:24}, height: {xs: 12, md:24} }} />
           </IconButtonAnimate>
         </Box>
 
