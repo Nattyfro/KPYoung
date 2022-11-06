@@ -90,64 +90,21 @@ export default function TravelTourPage() {
     <Page title={`${tour.slug} - Travel`}>
       <RootStyle>
         <Container>
-          <Breadcrumbs
-            sx={{ mt: 5 }}
-            links={[
-              { name: 'Home', href: '/' },
-              { name: 'Tours', href: Routes.travel.tours },
-              { name: tour.slug },
-            ]}
-          />
+          <TravelTourHeader tour={tour} />
+
+          <TravelTourDetails tour={tour} />
+
 
           <TravelTourGallery gallery={tour.gallery} />
 
           <Grid container spacing={8} direction="row-reverse">
-            <Grid item xs={12} md={5} lg={4}>
-              <TravelTourReserveForm tour={tour} />
-            </Grid>
-
             <Grid item xs={12} md={7} lg={8}>
-              <TravelTourHeader tour={tour} />
-
               <Divider sx={{ borderStyle: 'dashed', my: 5 }} />
 
-              <TravelTourDetails tour={tour} />
-
-              <Stack spacing={2} direction="row" sx={{ mt: 5 }}>
-                <Typography variant="subtitle2" sx={{ mt: 0.5 }}>
-                  Share:
-                </Typography>
-                <SocialsButton initialColor simple={false} links={tour.shareLinks} />
-              </Stack>
             </Grid>
           </Grid>
         </Container>
-
-        <Divider sx={{ my: { xs: 10, md: 15 } }} />
-
-        <Container>
-          <Grid container spacing={8}>
-            <Grid item xs={12} md={5} lg={4}>
-              <TravelTourGuideInfo tourGuide={tour.tourGuide} />
-            </Grid>
-
-            <Grid item xs={12} md={7} lg={8}>
-              <ReviewTravelToolbar
-                totalReview={_reviews.length}
-                onOpenReview={() => setOpenReview(!openReview)}
-                sort={sort}
-                onChangeSort={handleChangeSort}
-              />
-              <Collapse in={openReview}>
-                <ReviewForm onClose={() => setOpenReview(false)} />
-              </Collapse>
-              <ReviewTravelTourList reviews={_reviews} />
-            </Grid>
-          </Grid>
-        </Container>
-
         <TravelTourSimilar tours={tours.slice(-4)} />
-        <NewsletterTravel />
       </RootStyle>
     </Page>
   );

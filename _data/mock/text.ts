@@ -87,7 +87,7 @@ export const jobCategories = [
 
 export const tourName = [
   'Italian Delights - 12 Days',
-  'Best of Sicily - 8 Days (Small Group Tour)',
+  'Stourbridge, West Midlands',
   'Gourmet Journey of Emilia Romagna - 7 Days',
   'Adventure in Iceland',
   'Fire and Ice (6 Days)',
@@ -219,7 +219,7 @@ export const sentence = [
 
 export const description = [
   'Occaecati est et illo quibusdam accusamus qui. Incidunt aut et molestiae ut facere aut. Est quidem iusto praesentium excepturi harum nihil tenetur facilis. Ut omnis voluptates nihil accusantium doloribus eaque debitis.',
-  'Atque eaque ducimus minima distinctio velit. Laborum et veniam officiis. Delectus ex saepe hic id laboriosam officia. Odit nostrum qui illum saepe debitis ullam. Laudantium beatae modi fugit ut. Dolores consequatur beatae nihil voluptates rem maiores.',
+  'This job took 3 months to complete and roughly 200 working hours, it was completed by a team of 4 highly talented tradesmen based in Wolverhampton, if you would like the builders contact details feel free to request them on our contact us page.',
   'Rerum eius velit dolores. Explicabo ad nemo quibusdam. Voluptatem eum suscipit et ipsum et consequatur aperiam quia. Rerum nulla sequi recusandae illum velit quia quas. Et error laborum maiores cupiditate occaecati.',
   'Et non omnis qui. Qui sunt deserunt dolorem aut velit cumque adipisci aut enim. Nihil quis quisquam nesciunt dicta nobis ab aperiam dolorem repellat. Voluptates non blanditiis. Error et tenetur iste soluta cupiditate ratione perspiciatis et. Quibusdam aliquid nam sunt et quisquam non esse.',
   'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
