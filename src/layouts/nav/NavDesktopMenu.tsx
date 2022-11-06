@@ -22,7 +22,7 @@ import { HEADER_DESKTOP_HEIGHT } from '../../config';
 // @types
 import { NavDesktopMenuProps } from '../../@types/layout';
 //
-import { Image, CarouselDots, Iconify, CarouselArrows } from '../../components';
+import { Image, CarouselDots, Iconify } from '../../components';
 import { DialogAnimate, MotionContainer, varFade } from '../../components/animate';
 import launchIcon from '@iconify/icons-carbon/launch';
 import Routes from '../../routes';
@@ -52,35 +52,6 @@ const SubLinkStyle = styled(ListItem, {
   ...(active && {
     ...theme.typography.subtitle3,
     color: theme.palette.text.primary,
-  }),
-}));
-
-const IconBulletStyle = styled(Box, {
-  shouldForwardProp: (prop) => prop !== 'active',
-})<IconBulletStyleProps>(({ active, theme }) => ({
-  width: 12,
-  height: 24,
-  display: 'flex',
-  alignItems: 'center',
-  '&:before': {
-    content: '""',
-    display: 'block',
-    width: 4,
-    height: 4,
-    borderRadius: '50%',
-    backgroundColor: theme.palette.text.disabled,
-  },
-  ...(active && {
-    '&:before': {
-      content: '""',
-      width: 6,
-      height: 6,
-      borderRadius: '50%',
-      backgroundColor: theme.palette.primary.main,
-      transition: theme.transitions.create('all', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
   }),
 }));
 
@@ -116,15 +87,6 @@ export default function NavDesktopMenu({
     ...CarouselDots(),
   };
 
-  const minList = lists.length > 5;
-
-  const handlePrevious = () => {
-    carouselRef.current?.slickPrev();
-  };
-
-  const handleNext = () => {
-    carouselRef.current?.slickNext();
-  };
 
   return (
     <DialogAnimate
@@ -208,7 +170,7 @@ export default function NavDesktopMenu({
                 endIcon={<Iconify icon={launchIcon} />}
                 target="_blank"
                 rel="noopener"
-                href={Routes.figmaPreview}
+                href={Routes.marketing.posts}
                 color="inherit"
               >
                 View All Projects

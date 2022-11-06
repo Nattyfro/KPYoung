@@ -1,25 +1,18 @@
-import { useState, ReactElement } from 'react';
+import { ReactElement } from 'react';
 // next
 import { useRouter } from 'next/router';
 // @mui
 import { styled } from '@mui/material/styles';
 import {
   Grid,
-  Stack,
   Divider,
-  Collapse,
   Container,
-  Typography,
-  SelectChangeEvent,
 } from '@mui/material';
-// routes
-import Routes from '../../../src/routes';
 // config
 import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../../../src/config';
 // hooks
 import { useRequest } from '../../../src/hooks';
 // _data
-import { _reviews } from '../../../_data/mock';
 // layouts
 import Layout from '../../../src/layouts';
 // components
@@ -27,23 +20,13 @@ import {
   Page,
   ErrorScreen,
   LoadingScreen,
-  Breadcrumbs,
-  SocialsButton,
 } from '../../../src/components';
 // sections
-import { NewsletterTravel } from '../../../src/sections/newsletter';
-import {
-  ReviewForm,
-  ReviewTravelTourList,
-  ReviewTravelToolbar,
-} from '../../../src/sections/reviews';
 import {
   TravelTourHeader,
   TravelTourGallery,
   TravelTourDetails,
   TravelTourSimilar,
-  TravelTourGuideInfo,
-  TravelTourReserveForm,
 } from '../../../src/sections/@travel';
 
 // ----------------------------------------------------------------------
@@ -53,20 +36,12 @@ const RootStyle = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     paddingTop: HEADER_DESKTOP_HEIGHT,
   },
-}));
+})); 
 
 // ----------------------------------------------------------------------
 
 export default function TravelTourPage() {
   const router = useRouter();
-
-  const [sort, setSort] = useState('latest');
-
-  const [openReview, setOpenReview] = useState(false);
-
-  const handleChangeSort = (event: SelectChangeEvent) => {
-    setSort(event.target.value as string);
-  };
 
   const { id } = router.query;
 
