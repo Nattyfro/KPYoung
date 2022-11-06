@@ -42,7 +42,7 @@ export default function PlayerWithImage({ imgPath, ratio = '16/9', videoPath }: 
           size="large"
           color="inherit"
           onClick={handleOpen}
-          sx={{ width: '1', height: 1, bgcolor: 'common.white' }}
+          sx={{ width: 1, height: 1, bgcolor: 'common.white' }}
           sxWrap={{
             top: 0,
             left: 0,

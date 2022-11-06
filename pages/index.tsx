@@ -16,6 +16,7 @@ import { TeamMarketingLangding } from '../src/sections/team';
 import { OurClientsElearning } from '../src/sections/our-clients';
 import { ElearningLandingHero } from '../src/sections/@e-learning';
 import { MarketingAboutOurVision, MarketingServicesBenefits } from '../src/sections/@marketing';
+import { Box } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -36,7 +37,9 @@ export default function HomePage() {
 
         <OurClientsElearning brands={_brandsColor} />
 
-        <MarketingAboutOurVision />
+        <Box sx={{ mx: { sm: 5, md: 20 } }}>
+          <MarketingAboutOurVision />
+        </Box>
 
         <TeamMarketingLangding members={_members.slice(0, 4)} />
 

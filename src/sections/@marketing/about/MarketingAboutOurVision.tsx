@@ -20,7 +20,6 @@ export default function MarketingAboutOurVision() {
         <Container sx={{ position: 'relative' }}>
           <Box
             sx={{
-              mx: { sm: 5, md: 20 },
               borderRadius: 5,
               boxShadow: (theme) => theme.customShadows.z24,
             }}

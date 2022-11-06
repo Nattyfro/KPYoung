@@ -38,22 +38,22 @@ export default function MarketingCaseStudySummary({ frontmatter }: Props) {
         <Divider sx={{ borderStyle: 'dashed' }} />
 
         <Stack spacing={1}>
-          <Typography variant="overline" sx={{ color: 'text.disabled' }}>
+          {/* <Typography variant="overline" sx={{ color: 'text.disabled' }}>
             Website
           </Typography>
-          <Typography variant="body2">{website}</Typography>
+          <Typography variant="body2">{website}</Typography> */}
 
-          <Typography variant="overline" sx={{ color: 'text.disabled', pt: 1 }}>
+          {/* <Typography variant="overline" sx={{ color: 'text.disabled', pt: 1 }}>
             Category
           </Typography>
           <Typography variant="body2" sx={{ pb: 1 }}>
             {category}
-          </Typography>
+          </Typography> */}
 
-          <Typography variant="overline" sx={{ color: 'text.disabled' }}>
+          {/* <Typography variant="overline" sx={{ color: 'text.disabled' }}>
             Date
           </Typography>
-          <Typography variant="body2">{fDate(createdAt)}</Typography>
+          <Typography variant="body2">{fDate(createdAt)}</Typography> */}
         </Stack>
 
         <Divider sx={{ borderStyle: 'dashed' }} />

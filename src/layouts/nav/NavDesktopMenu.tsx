@@ -168,9 +168,7 @@ export default function NavDesktopMenu({
                 size="large"
                 variant="contained"
                 endIcon={<Iconify icon={launchIcon} />}
-                target="_blank"
-                rel="noopener"
-                href={Routes.marketing.posts}
+                href={Routes.marketing.caseStudies}
                 color="inherit"
               >
                 View All Projects

@@ -40,7 +40,7 @@ type Props = {
 
 export default function MarketingCaseStudiesPage({ posts, caseStudies }: Props) {
   return (
-    <Page title="Case Studies - Marketing">
+    <Page title="Portfolio">
       <RootStyle>
         <Container>
           <Stack
@@ -50,10 +50,9 @@ export default function MarketingCaseStudiesPage({ posts, caseStudies }: Props) 
               textAlign: { xs: 'center', md: 'left' },
             }}
           >
-            <Typography variant="h2">Our Case Studies</Typography>
+            <Typography variant="h2">Our Portfolio</Typography>
             <Typography sx={{ color: 'text.secondary' }}>
-              Nullam tincidunt adipiscing enim.
-              <br /> Mauris sollicitudin fermentum libero.
+              Browse though our past projects we have worked on
             </Typography>
           </Stack>
 

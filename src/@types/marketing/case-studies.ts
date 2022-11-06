@@ -14,10 +14,19 @@ export type CaseStudyFrontmatter = {
   galleryImgs: string[];
   website: string;
   socialLinks?: SocialLinks;
+    includes: {
+    label: string;
+    enabled: boolean;
+  }[];
 };
 
 export type CaseStudyProps = {
   slug: string;
   content: MDXRemoteSerializeResult;
   frontmatter: CaseStudyFrontmatter;
+  description: string;
+  includes: {
+    label: string;
+    enabled: boolean;
+  }[];
 };

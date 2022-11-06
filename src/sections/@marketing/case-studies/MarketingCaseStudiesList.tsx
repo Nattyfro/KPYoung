@@ -29,6 +29,7 @@ export default function MarketingCaseStudiesList({ caseStudies }: Props) {
     <>
       <Box
         sx={{
+          visibility:{xs:'hidden'},
           pt: 5,
           pb: { xs: 5, md: 10 },
         }}
@@ -64,9 +65,11 @@ export default function MarketingCaseStudiesList({ caseStudies }: Props) {
       </Box>
 
       <Pagination
-        count={10}
+        count={2}
         color="primary"
         size="large"
+        hideNextButton
+        hidePrevButton
         sx={{
           pt: 10,
           pb: { xs: 10, md: 15 },
