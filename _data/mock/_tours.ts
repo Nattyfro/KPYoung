@@ -62,7 +62,7 @@ export const _tours = [...Array(12)].map((_, index) => ({
   ],
   languages: ['Russian', 'Spanish'],
   tags: ['Lamp', 'A man', 'Human', 'Lantern', 'Festival'],
-  gallery: [...Array(6)].map((_, index) => _mock.image.travel(index + 2)),
+  gallery: [...Array(6)].map((_, index) => _mock.image.travel(index + 1)),
   description: _mock.text.description(index),
   highlights: [...Array(6)].map((_, index) => _mock.text.sentence(index)),
   program: [...Array(3)].map((_, index) => ({

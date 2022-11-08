@@ -16,11 +16,11 @@ const SERVICES = [
     icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_sketch_design.svg',
   },
   {
-    name: 'Research',
+    name: 'Sourcing',
     icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_search.svg',
   },
   {
-    name: 'Optimizing',
+    name: 'Installation',
     icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_optimization.svg',
   },
   {

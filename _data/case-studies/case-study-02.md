@@ -1,32 +1,35 @@
 ---
-title: 'Technology Nixon'
-description: 'Praesent vestibulum dapibus nibh. Vestibulum fringilla pede sit amet augue. '
-category: 'Digital'
-coverImg: 'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_2.jpg'
+title: 'Stourbridge, West Midlands'
+description: 'This project was built in the heart of Stourbridge in the West Midlands. '
+category: 'Branding'
+coverImg: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg'
 heroImg: 'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_hero.jpg'
 createdAt: '2020-03-16T05:35:07.322Z'
 galleryImgs:
   [
-    'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_1.jpg',
-    'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_2.jpg',
-    'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_3.jpg',
-    'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_4.jpg',
-    'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_5.jpg',
-    'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_6.jpg',
-    'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_7.jpg',
-    'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_8.jpg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
   ]
-website: https://example.com/
-socialLinks:
-  facebook: '#facebook-link'
-  instagram: '#instagram-link'
-  linkedin: '#linkedin-link'
-  twitter: '#twitter-link'
+
+includes:
+  [
+    { label: 'Natural Slates', enabled: true },
+    { label: 'Breathable Felt', enabled: true },
+    { label: 'Wet Verges', enabled: true },
+    { label: 'Clay Ridges', enabled: true },
+    { label: 'Lead Valleys', enabled: true },
+    { label: 'Leaded Sadles', enabled: true },
+  ]
 ---
 
 ### Project Brief
 
-Nullam tincidunt adipiscing enim. Mauris sollicitudin fermentum libero. Pellentesque auctor neque nec urna. Sed fringilla mauris sit amet nibh. Phasellus viverra nulla ut metus varius laoreet.
+MYLES MYLES MYLES MYLES MYLES
 
 ### How We Work
 

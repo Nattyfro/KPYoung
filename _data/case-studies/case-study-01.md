@@ -2,21 +2,21 @@
 title: 'Stourbridge, West Midlands'
 description: 'This project was built in the heart of Stourbridge in the West Midlands. '
 category: 'Branding'
-coverImg: "https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg"
+coverImg: 'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg'
 heroImg: 'https://zone-assets-api.vercel.app/assets/images/marketing/marketing_hero.jpg'
 createdAt: '2020-03-16T05:35:07.322Z'
 galleryImgs:
   [
-    "https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg",
-    "https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg",
-    "https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg",
-    "https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg",
-    "https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg",
-    "https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg",
-    "https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg",
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
+    'https://kpyoungroofing.vercel.app/assets/Portfolio/Stourbridge/CDC_2.jpeg',
   ]
-  
-includes: 
+
+includes:
   [
     { label: 'Natural Slates', enabled: false },
     { label: 'Breathable Felt', enabled: true },
@@ -25,7 +25,6 @@ includes:
     { label: 'Lead Valleys', enabled: true },
     { label: 'Leaded Sadles', enabled: true },
   ]
-  
 ---
 
 ### Project Brief

@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { serialize } from 'next-mdx-remote/serialize';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Container, Grid, Stack, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 // routes
 import Routes from '../../../src/routes';
 // utils
@@ -20,18 +20,15 @@ import { _testimonials } from '../../../_data/mock';
 // layouts
 import Layout from '../../../src/layouts';
 // components
-import { Page, Markdown, Breadcrumbs, TextIconLabel, Iconify } from '../../../src/components';
+import { Page, Breadcrumbs, varFade } from '../../../src/components';
 // sections
-import { NewsletterMarketing } from '../../../src/sections/newsletter';
 import { TestimonialsMarketing } from '../../../src/sections/testimonials';
 import {
-  MarketingFreeSEO,
-  MarketingCaseStudySummary,
   MarketingCaseStudiesSimilar,
-  MarketingAboutOurVision,
   CaseStudiesGallery,
 } from '../../../src/sections/@marketing';
-import checkmarkIcon from '@iconify/icons-carbon/checkmark';
+import { m } from 'framer-motion';
+import ProjectSummary from '../../../src/sections/@Roofing/landing/ProjectSummary';
 
 // ----------------------------------------------------------------------
 
@@ -52,7 +49,7 @@ type Props = {
 export default function MarketingCaseStudyPage({ caseStudies, caseStudy }: Props) {
   const { frontmatter } = caseStudy;
 
-  const { title, coverImg, galleryImgs, includes } = frontmatter;
+  const { title, description, coverImg, galleryImgs, includes } = frontmatter;
 
   return (
     <Page
@@ -74,67 +71,36 @@ export default function MarketingCaseStudyPage({ caseStudies, caseStudy }: Props
             ]}
           />
 
-          {/* <Stack spacing={3} sx={{ mb: 8, mx: 'auto', maxWidth: 600, textAlign: 'center' }}>
-            <Typography variant="h2">{title}</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              Over the years we have built up a collection of creditable building contracts, feel
-              free to contact them and ask about our workmanship
-            </Typography>
-          </Stack> */}
-
-          <Grid
-            container
-            spacing={{ md: 8 }}
-            direction={{ md: 'row' }}
+          <Box
             sx={{
-              pb: { xs: 10, md: 15 },
+              mb: { xs: 8, md: 10 },
+              textAlign: 'center',
             }}
           >
-            <Grid item xs={12} md={4}>
-              <MarketingCaseStudySummary frontmatter={frontmatter} />
-            </Grid>
-            <Grid item xs={12} md={8}>
-              <MarketingAboutOurVision />
-            </Grid>
-          </Grid>
+            <m.div variants={varFade().inDown}>
+              <Typography variant="overline" sx={{ color: 'primary.main' }}>
+                Project
+              </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inDown}>
+              <Typography variant="h2" sx={{ mt: 2, mb: 3 }}>
+                {title}
+              </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inDown}>
+              <Typography sx={{ color: 'text.secondary' }}>{description}</Typography>
+            </m.div>
+          </Box>
+        </Container>
+
+        <ProjectSummary includes={includes} />
+
+        <Container sx={{ py: 10 }}>
           <Typography variant="h4" paragraph>
             Project Includes
           </Typography>
-
-          <Box
-            sx={{
-              display: 'grid',
-              rowGap: 2,
-              p: 2,
-              columnGap: 0,
-              gridTemplateColumns: {
-                xs: 'repeat(1, 1fr)',
-                sm: 'repeat(2, 1fr)',
-              },
-            }}
-          >
-            {includes.map((option) => (
-              <TextIconLabel
-                key={option.label}
-                icon={
-                  <Iconify
-                    icon={checkmarkIcon}
-                    sx={{
-                      mr: 2,
-                      width: 20,
-                      height: 20,
-                      color: 'primary.main',
-                      ...(!option.enabled && { color: 'currentColor' }),
-                    }}
-                  />
-                }
-                value={option.label}
-                sx={{
-                  ...(!option.enabled && { color: 'text.disabled' }),
-                }}
-              />
-            ))}
-          </Box>
 
           <CaseStudiesGallery images={galleryImgs} />
         </Container>
@@ -142,10 +108,6 @@ export default function MarketingCaseStudyPage({ caseStudies, caseStudy }: Props
         <TestimonialsMarketing testimonials={_testimonials} />
 
         <MarketingCaseStudiesSimilar caseStudies={caseStudies.slice(0, 3)} />
-
-        <MarketingFreeSEO />
-
-        <NewsletterMarketing />
       </RootStyle>
     </Page>
   );
