@@ -1,6 +1,6 @@
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 // components
 import { PlayerWithImage } from '../../../components';
 
@@ -17,17 +17,17 @@ export default function MarketingAboutOurVision() {
   return (
     <>
       <RootStyle>
-          <Box
-            sx={{
-              borderRadius: 5,
-              boxShadow: (theme) => theme.customShadows.z24,
-            }}
-          >
-            <PlayerWithImage
-              imgPath="https://kpyoungroofing.vercel.app/assets/Movies/Images/Thumbnail.png"
-              videoPath="https://www.youtube.com/embed/eAgAnhkVvhE"
-            />
-          </Box>
+        <Box
+          sx={{
+            borderRadius: 5,
+            boxShadow: (theme) => theme.customShadows.z24,
+          }}
+        >
+          <PlayerWithImage
+            imgPath="https://kpyoungroofing.vercel.app/assets/Movies/Images/Thumbnail.png"
+            videoPath="https://www.youtube.com/embed/eAgAnhkVvhE"
+          />
+        </Box>
       </RootStyle>
     </>
   );
